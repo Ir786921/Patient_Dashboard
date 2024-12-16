@@ -3,21 +3,21 @@ import PatientChart from "./Component/PatientChart";
 import PatientDetails from "./Component/PatientDetails";
 import Sidebar from "./Component/Sidebar";
 import Header from "./Component/Header";
-import { username, password ,url } from "./Secretfile";
+
 
 
 const App = () => {
   const [patients, setPatients] = useState([]);
   const [selectedPatient, setSelectedPatient] = useState(null);
 
-  const credentials = btoa(`${username}:${password}`);
+  const credentials = btoa(`${process.env.REACT_APP_USER_NAME}:${process.env.REACT_APP_PASSWORD}`);
 
   useEffect(() => {
     getPatients();
   }, []);
 
   async function getPatients() {
-    const response = await fetch(url, {
+    const response = await fetch(process.env.REACT_APP_URL, {
       method: "GET",
       headers: {
         Authorization: `Basic ${credentials}`,
