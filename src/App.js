@@ -3,13 +3,13 @@ import PatientChart from "./Component/PatientChart";
 import PatientDetails from "./Component/PatientDetails";
 import Sidebar from "./Component/Sidebar";
 import Header from "./Component/Header";
+import { username, password ,url } from "./Secretfile";
+
 
 const App = () => {
   const [patients, setPatients] = useState([]);
   const [selectedPatient, setSelectedPatient] = useState(null);
-  const username = "coalition";
-  const password = "skills-test";
-  const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
+
   const credentials = btoa(`${username}:${password}`);
 
   useEffect(() => {
@@ -28,9 +28,7 @@ const App = () => {
     setPatients(result);
   }
 
-  const getJessicaDetails = patients.filter((item)=>{
-    return item?.name === "Jessica Taylor";
-  })
+ 
   
 return (
    <>
