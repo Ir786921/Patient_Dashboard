@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a75e1509.css",
+    "main.js": "/static/js/main.8358bcbd.js",
+    "static/media/TestLogo.svg": "/static/media/TestLogo.88af223195d0f4c09a8c609cf21c6d07.svg",
+    "static/media/respiratory rate.svg": "/static/media/respiratory rate.91b9df1e29e5ac8db704985dfba6f58b.svg",
+    "static/media/settings_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/settings_FILL0_wght300_GRAD0_opsz24.54c7341e4f983882bc667b5404b24d06.svg",
+    "static/media/group_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/group_FILL0_wght300_GRAD0_opsz24.8e2b21f0f3058da9a4720e82e371322a.svg",
+    "static/media/temperature.svg": "/static/media/temperature.bcc3cba2fce6f4d9881558099af8bd22.svg",
+    "static/media/MaleIcon.svg": "/static/media/MaleIcon.63bbef2b26a86f7d746c44559dc809f2.svg",
+    "static/media/download_FILL0_wght300_GRAD0_opsz24 (1).svg": "/static/media/download_FILL0_wght300_GRAD0_opsz24 (1).7978e61f446647aad84459d171783114.svg",
+    "static/media/calendar_today_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/calendar_today_FILL0_wght300_GRAD0_opsz24.a507bf19d18aaf3bc29cf5e18b348a13.svg",
+    "static/media/more_vert_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/more_vert_FILL0_wght300_GRAD0_opsz24.d16a730a98a471ca6001685ef82c547d.svg",
+    "static/media/home_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/home_FILL0_wght300_GRAD0_opsz24.9721604287b838f7bb2d308da7ad58c0.svg",
+    "static/media/more_horiz_FILL0_wght300_GRAD0_opsz24 (1).svg": "/static/media/more_horiz_FILL0_wght300_GRAD0_opsz24 (1).54b8cdaddb378799dd125df66df6b519.svg",
+    "static/media/search_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/search_FILL0_wght300_GRAD0_opsz24.dc77fcb80c94b9c4b3251f3c6c817344.svg",
+    "static/media/credit_card_FILL0_wght300_GRAD0_opsz24.svg": "/static/media/credit_card_FILL0_wght300_GRAD0_opsz24.f6fad4a06c12d5125e8d504e78466c90.svg",
+    "index.html": "/index.html",
+    "static/media/ArrowDown.svg": "/static/media/ArrowDown.b9c4d70b22fa0deaa1a5c9a9b6db8157.svg",
+    "static/media/ArrowUp.svg": "/static/media/ArrowUp.bc2a412d5da9756768289864c2df3d73.svg",
+    "main.a75e1509.css.map": "/static/css/main.a75e1509.css.map",
+    "main.8358bcbd.js.map": "/static/js/main.8358bcbd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a75e1509.css",
+    "static/js/main.8358bcbd.js"
+  ]
+}

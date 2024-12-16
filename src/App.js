@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import PatientChart from "./Component/PatientChart";
+import PatientDetails from "./Component/PatientDetails";
+import Sidebar from "./Component/Sidebar";
+import Header from "./Component/Header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  const [patients, setPatients] = useState([]);
+  const [selectedPatient, setSelectedPatient] = useState(null);
+  const username = "coalition";
+  const password = "skills-test";
+  const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
+  const credentials = btoa(`${username}:${password}`);
+
+  useEffect(() => {
+    getPatients();
+  }, []);
+
+  async function getPatients() {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization: `Basic ${credentials}`,
+      },
+    });
+
+    const result = await response.json();
+    setPatients(result);
+  }
+
+  const getJessicaDetails = patients.filter((item)=>{
+    return item?.name === "Jessica Taylor";
+  })
+  
+return (
+   <>
+   <div className=" tw-bg-[#F6F7F8] tw-p-3">
+    <div><Header /></div>
+    <div className=" tw-flex md:tw-flex-row tw-flex-col tw-gap-5">
+    <div>
+          {" "}
+          <Sidebar patients={patients} onSelect={setSelectedPatient} />
+        </div>
+        <div className="">
+          <div className="tw-flex md:tw-flex-row tw-flex-col tw-gap-5 tw-p-2">
+            {selectedPatient ? (
+              <>
+                <PatientChart data={selectedPatient?.diagnosis_history} diagnostic = {selectedPatient?.diagnostic_list}/>
+                <PatientDetails patient={selectedPatient} />
+              </>
+            ) : (
+              <h1 className=" tw-text-[20px] tw-font-semibold">
+                No Data Available Please select Patient.....
+              </h1>
+            )}
+          </div>
+        </div>
     </div>
+    </div>
+   </>
+           
   );
-}
+};
 
 export default App;
